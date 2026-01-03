@@ -1,5 +1,4 @@
 name: Dump Issue Context
-
 on:
   issues:
     types: [opened, labeled, assigned] # Trigger on issue activities
