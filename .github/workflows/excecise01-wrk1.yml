@@ -8,13 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: install node js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
       - name: run lint
-        run: cd 04_project/04_Practice_Project
-        run: npm run lint
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run lint
       - name: print success
         run: echo "lint success"
   run-test:
@@ -22,13 +20,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: install node js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
       - name: run test
-        run: cd 04_project/04_Practice_Project
-        run: npm run test
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run test
       - name: print success
         run: echo "test success"
   run-build:
@@ -36,13 +32,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: install node js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
       - name: run build
-        run: cd 04_project/04_Practice_Project
-        run: npm run build
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run build
       - name: print success
         run: echo "build success"
   deploy:
@@ -51,12 +45,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: install node js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
       - name: deploy
-        run: cd 04_project/04_Practice_Project      
-        run: npm run deploy
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run build      
+          npm run deploy
       - name: print success
         run: echo "deploy success"
