@@ -13,6 +13,7 @@ jobs:
         with:
           node-version: 18
       - name: run lint
+        run: cd 04_project/04_Practice_Project
         run: npm run lint
       - name: print success
         run: echo "lint success"
@@ -26,6 +27,7 @@ jobs:
         with:
           node-version: 18
       - name: run test
+        run: cd 04_project/04_Practice_Project
         run: npm run test
       - name: print success
         run: echo "test success"
@@ -39,6 +41,7 @@ jobs:
         with:
           node-version: 18
       - name: run build
+        run: cd 04_project/04_Practice_Project
         run: npm run build
       - name: print success
         run: echo "build success"
@@ -53,6 +56,7 @@ jobs:
         with:
           node-version: 18
       - name: deploy
+        run: cd 04_project/04_Practice_Project      
         run: npm run deploy
       - name: print success
         run: echo "deploy success"
