@@ -49,6 +49,6 @@ jobs:
         run: |
           cd 04_project/04_Practice_Project
           npm install
-          npm run deploy
+          npm run preview
       - name: print success
         run: echo "deploy success"
