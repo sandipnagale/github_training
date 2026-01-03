@@ -1,12 +1,12 @@
-name: workflow2
-on: workflow_dispatch
+name: Dump Issue Context
+
+on:
+  issues:
+    types: [opened, labeled, assigned] # Trigger on issue activities
+
 jobs:
-  first-job:
+  print_event_data:
     runs-on: ubuntu-latest
     steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo Good Bye
+      - name: Dump GitHub event context
+        run: echo "${{ toJson(github.event) }}"
