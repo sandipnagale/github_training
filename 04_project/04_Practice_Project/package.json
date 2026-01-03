@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest run",
-    "deploy": "echo deploy"
+    "deploy": "echo deploying"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
