@@ -9,8 +9,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: run lint
-        run: cd 04_project/04_Practice_Project
-        run: npm run lint
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run lint
       - name: print success
         run: echo "lint success"
   run-test:
@@ -19,8 +21,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: run test
-        run: cd 04_project/04_Practice_Project
-        run: npm run test
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run test
       - name: print success
         run: echo "test success"
   run-build:
@@ -29,8 +33,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: run build
-        run: cd 04_project/04_Practice_Project
-        run: npm run build
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run build
       - name: print success
         run: echo "build success"
   deploy:
@@ -40,7 +46,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: deploy
-        run: cd 04_project/04_Practice_Project      
-        run: npm run deploy
+        run: |
+          cd 04_project/04_Practice_Project
+          npm install
+          npm run deploy
       - name: print success
         run: echo "deploy success"
