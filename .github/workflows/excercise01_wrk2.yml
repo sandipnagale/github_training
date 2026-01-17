@@ -1,7 +1,5 @@
 name: Dump Issue Context
-on:
-  issues:
-    types: [opened, labeled, assigned] # Trigger on issue activities
+on: issues
 jobs:
   print_event_data:
     runs-on: ubuntu-latest
