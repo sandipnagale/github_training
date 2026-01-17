@@ -9,4 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub event context
-        run: echo "${{ toJson(github.env) }}"
+        run: |
+          echo "${{ toJson(github.action) }}"
+          echo "${{ toJson(github.api_url) }}"
+          echo "${{ toJson(github.token) }}"
