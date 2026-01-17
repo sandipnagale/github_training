@@ -1,11 +1,11 @@
 
 name: execute multiple jobs
-on: push
+on: workflow_dispatch
 jobs:
   print_message:
     runs-on: ubuntu-latest
     steps:
       - name: print_first_message
-        run: echo "first job"
+        run: echo "first jobs"
 
 
