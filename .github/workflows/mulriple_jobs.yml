@@ -2,7 +2,7 @@ name: execute multiple jobs
 on: push
 jobs:
   print_message:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
       steps:
         - name: print_first_message
           run: echo "first job"
