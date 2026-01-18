@@ -9,7 +9,7 @@ jobs:
     env:
         NAME: 'My Action 2'
     runs-on: ubuntu-latest
-    steps:
+
     - name: Print name
       run: echo "$NAME"
       env:
