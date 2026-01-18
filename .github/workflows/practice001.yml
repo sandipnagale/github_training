@@ -1,11 +1,16 @@
-
-name: execute multiple jobs
-on: workflow_dispatch
+name: Java CI with Maven 
+env:
+  NAME: 'My Action' 
+on:
+  push:
+    branches: [ "main" ]
 jobs:
-  print_message:
+  build:
+    env:
+        NAME: 'My Action 2'
     runs-on: ubuntu-latest
     steps:
-      - name: print_first_message
-        run: echo "first jobs"
-
-
+    - name: Print name
+      run: echo "$NAME"
+      env:
+        NAME: 'My Action 3'
