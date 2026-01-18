@@ -1,16 +1,13 @@
-name: Java CI with Maven 
-env:
-  NAME: 'My Action' 
-on:
-  push:
-    branches: [ "main" ]
+name: learn-github-actions
+on: workflow_dispatch
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 jobs:
-  build:
-    env:
-        NAME: 'My Action 2'
+  Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-
-    - name: Print name
-      run: echo "$NAME"
-      env:
-        NAME: 'My Action 3'
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
