@@ -11,7 +11,7 @@ jobs:
           node-version: '14'
       - run: |
           echo "::group::Step 1: Install Dependencies"
-          npm install
+          npm install -g bats
           echo "::endgroup::"
           echo "::group::Step 2: Run Tests"
           npm test
